@@ -1,6 +1,14 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import config from "../config.js";
 
+const { apiUri } = config
+
+fetch(`${apiUri}`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+  })
 </script>
 <template>
   <div class="about">

@@ -1,0 +1,12 @@
+{
+  "type" : "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "start": "node app.js --trace-warnings",
+    "dev": "nodemon app.js --trace-warnings"
+  }
+}
