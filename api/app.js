@@ -21,14 +21,17 @@ app.get('/registration', (req, res) => {
     document : "", 
     name : "", 
     email : "", 
-    type : "PF", 
+    type : "PJ", 
     password : "", 
    })
 })
 
 app.post('/registration', (req, res) => {
   const data = req.body
-  //send data to database
+
+  // aqui deverá ser adicionado a lógica de validação dos dados e persistência no banco de dados
+  // como não foi solicitado isso no desafio, não foi implementado por questão de fidelidade ao enunciado
+
   res.json({success : true})
 })
 

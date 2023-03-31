@@ -3,6 +3,7 @@ import { ref, watch } from 'vue';
 
 const props = defineProps({
   label : String,
+  mask : String,
   type : {
     type : String,
     default : "text"
@@ -29,7 +30,7 @@ watch(() => value.value, (val) => {
 <template>
   <div :class="`input-text ${disabled ? 'disabled' : ''}`">
     <label>{{ label }}</label>
-    <input :disabled="disabled" :required="required" :type="type" v-model="value"/>
+    <input :disabled="disabled" :required="required" :type="type" v-model="value" v-mask="mask" :maxlength="mask && mask.length"/>
   </div>
 </template>
 
